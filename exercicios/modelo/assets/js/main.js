@@ -2,7 +2,7 @@ function calcular() {
     const form = document.querySelector('.form');
     const resultado = document.querySelector('.resultado');
 
-    function pararRefresh(evento) {
+    form.addEventListener('submit', function pararRefresh(evento) {
         evento.preventDefault();
 
         const peso = Number(form.querySelector('#input-peso').value);
@@ -17,13 +17,13 @@ function calcular() {
             formulaImc = peso / (altura * altura);
 
             abaixoPeso = formulaImc < 18.5;
-            pesoNormal =  formulaImc >= 18.5 && formulaImc <= 24.9;
+            pesoNormal = formulaImc >= 18.5 && formulaImc <= 24.9;
             sobrepeso = formulaImc >= 25 && formulaImc <= 29.9;
             ObesidadeGrauI = formulaImc >= 30 && formulaImc <= 34.9;
             ObesidadeGrauII = formulaImc >= 35 && formulaImc <= 39.9;
             ObesidadeGrauIII = formulaImc >= 40;
 
-            if(abaixoPeso) {
+            if (abaixoPeso) {
                 resultado.innerHTML = `O seu IMC é: ${formulaImc.toFixed(2)} (abaixo do peso)`;
                 corDeFundo;
             } else if (pesoNormal) {
@@ -43,9 +43,7 @@ function calcular() {
                 corDeFundo;
             }
         }
-    };
-    form.addEventListener('submit', pararRefresh);
+    })
 }
-
 
 calcular();
