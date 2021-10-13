@@ -20,9 +20,11 @@ form.addEventListener('submit', function(e) {
         return;
     }
 
+    //Constantes que recebem como argumentos o peso a altura e o imc.
     const imc = getImc(peso, altura);
     const nivelImc = getNivelImc(imc);
 
+    //Mostra a mensagem com o IMC 
     const msg = `Seu IMC é ${imc} (${nivelImc})`;
     
     setResultado(msg, true);
@@ -52,6 +54,7 @@ function getNivelImc(imc) {
     if (imc < 18.5) return nivel[0]; 
 }
 
+//Função que recebe o peso e a altura digitadas e calcula o IMC.
 function getImc(peso, altura) {
     const imc = peso / (altura ** 2);
     return imc.toFixed(2);
@@ -68,7 +71,6 @@ function setResultado(msg, isValid) {
     const resultado = document.querySelector('#resultado')
     resultado.innerHTML = '';
 
-    
     const p = criaP();
 
     if(isValid) {
