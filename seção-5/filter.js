@@ -5,7 +5,11 @@
 const numeros = [5, 50, 80, 1, 2, 3, 4, 5, 8, 7, 11, 15, 22, 27];
 
 const numerosFiltrados = numeros.filter(valor => valor > 10);
-//console.log(numerosFiltrados);
+const numerosPares = numeros.filter(function(valor) {
+    if(valor % 2 !== 0) return valor;
+})
+console.log(numerosPares);
+
 
 
 
@@ -30,12 +34,7 @@ const pessoas = [
 
 //
 const pessoasComNomeGrande = pessoas.filter(obj => obj.nome.length >= 5);
-console.log(pessoasComNomeGrande);
-
 const pessoasMaioresDeCinquenta = pessoas.filter(obj => obj.idade > 50);
-console.log(pessoasMaioresDeCinquenta);
-
 const nomeTerminaComA = pessoas.filter(obj => {
     return obj.nome.toLowerCase().endsWith('a');
 });
-console.log(nomeTerminaComA);
