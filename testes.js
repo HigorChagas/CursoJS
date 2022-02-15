@@ -1,15 +1,10 @@
-// Altere apenas o código abaixo desta linha
-function countdown(n){
-
-  if (n < 1) {
-    return []
-  } else {
-    const countArray = countdown(n - 1);
-    countArray.unshift(n);
-    return countArray;
-  }
-  return;
+function recurse(max) {
+  if(max === 10) {
+    return;
+  } 
+  max++
+  console.log(max);
+  recurse(max);
 }
 
-console.log(countdown(4));
-// Altere apenas o código acima desta linha
+recurse(2);
