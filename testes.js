@@ -1,16 +1,8 @@
-// function recurse(max) {
-//   if(max === 10) {
-//     return;
-//   } 
-//   max++
-//   console.log(max);
-//   recurse(max);
-// }
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function removeFirstTwo(list) {
+    
+    const [a, b, ...arr] = list;
+    console.log(arr);
+}
 
-// recurse(2);
-
-let a = 8, b = 6, c = 10;
-
-const numeros = [b, c ,a];
-[a, b, c] = numeros;
-console.log(numeros);
+const arr = removeFirstTwo(source);
