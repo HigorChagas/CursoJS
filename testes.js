@@ -1,8 +1,22 @@
-const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-function removeFirstTwo(list) {
-    
-    const [a, b, ...arr] = list;
-    console.log(arr);
-}
+// const makeServerRequest = new Promise((resolve, reject) => {
+//     let responseFromServer = false;
 
-const arr = removeFirstTwo(source);
+//     if(responseFromServer) {
+//         resolve('We got the data');
+//     } else {
+//         reject('Data not received');
+//     }
+// });
+
+// makeServerRequest.then(result => {
+//     console.log(result);
+// });
+
+// makeServerRequest.catch(error => {
+//     console.log(error);
+// });
+
+let string = 'Hi, my name is Higor Nascimento das Chagas';
+let myRegex = /higor/i;
+let result = myRegex.test(string);
+console.log(result);
