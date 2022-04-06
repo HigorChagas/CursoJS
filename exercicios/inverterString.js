@@ -1,8 +1,10 @@
-function reverseString(...str) {
+function reverseString(str) {
 
-    str.reverse();
+    const stringArray = str.split('');
+    const reverseArray = stringArray.reverse();
+    const joinArray = reverseArray.join('');
 
-    console.log(str);
+    console.log(joinArray);
   }
   
   reverseString("hello");
