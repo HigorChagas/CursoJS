@@ -51,18 +51,27 @@
 
 // betterThanAverage([2, 5], 62);
 
-function fakeBin(x) {
-  const array = x.split('');
-  let binary;
+// function fakeBin(x) {
+//   const array = x.split('');
+//   let binary;
 
-  for(let elements of array) {
-    binary = elements < 5 ? '0' : '1';
-    stringList = binary.toString();
-    console.log('45385593107843568');
+//   for(let elements of array) {
+//     binary = elements < 5 ? '0' : '1';
+//     stringList = binary.toString();
+//     console.log('45385593107843568');
+//   }
+
+// }
+
+// fakeBin('45385593107843568');
+
+function check(a, x) {
+  if(a.includes(x)) {
+    console.log(true);
+  } else {
+    console.log(false)
   }
-
 }
-
-fakeBin('45385593107843568');
+check([66, 101], 66);
 
 
