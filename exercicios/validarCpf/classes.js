@@ -8,6 +8,7 @@ class ValidaCPF {
         });
     }
 
+    
     eSequencia() {
         return this.cpfLimpo.charAt(0).repeat(11) === this.cpfLimpo;
     }
